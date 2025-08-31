@@ -1,4 +1,4 @@
-# 🌊 Flood Risk Mapping in Pakistan Using Remote Sensing & Change Detection
+# 🌊 Flood Risk Mapping in Pakistan Using Remote Sensing & Change Detection  
 
 ## 📌 Project Overview  
 This project analyzes **monsoon flood risks in Pakistan** using **Google Earth Engine (GEE)** and **Sentinel-1 SAR satellite imagery**.  
@@ -45,20 +45,15 @@ The study covers **Layyah, Dadu, and Nowshera**, focusing on:
 
 ---
 
-🎯 Impact & Applications
+## 🎯 Impact & Applications  
 
-Disaster Management → Early response & relief planning
+- **Disaster Management** → Early response & relief planning  
+- **Policy Making** → Region-specific preparedness strategies  
+- **Agriculture** → Crop insurance & water management insights  
+- **Urban Planning** → Identifying high-risk settlement zones  
 
-Policy Making → Region-specific preparedness strategies
-
-Agriculture → Crop insurance & water management insights
-
-Urban Planning → Identifying high-risk settlement zones
-
+---
 ## 💻 Sample GEE Code Snippet
-Here’s a simplified snippet used for **Nowshera (July 2022)** flood mapping:
-
-```javascript
 // Define region of interest
 var nowshera = ee.Geometry.Rectangle([71.800, 33.900, 72.400, 34.300]);
 Map.centerObject(nowshera, 9);
@@ -73,3 +68,17 @@ var nowsheraImage = ee.ImageCollection('COPERNICUS/S1_GRD')
   .mean()
   .clip(nowshera);
 
+
+---
+
+
+## 📂 Project Structure  
+
+```bash
+├── Flood Change Detection Code (2014-2025)            # GEE code for change detection analysis
+├── Flood Change Detection Imagery.pdf                 # Maps generated for flood change detection
+├── Flood Risk Mapping Code – (July 2022)              # GEE code for July 2022 flood mapping
+├── Flood Risk Mapping Imagery.pdf                     # Maps generated for July 2022 flood mapping
+├── Geospatial Flood Risk Assessment(SAR Analysis).pdf # Comprehensive report
+├── LICENSE                                            # License file
+├── README.md                                          # Project documentation
