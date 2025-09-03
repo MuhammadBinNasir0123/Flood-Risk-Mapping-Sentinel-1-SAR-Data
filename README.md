@@ -1,6 +1,6 @@
-# 🌊 Flood Risk Mapping in Pakistan Using Remote Sensing & Change Detection  
+#  Flood Risk Mapping in Pakistan Using Remote Sensing & Change Detection  
 
-## 📌 Project Overview  
+##  Project Overview  
 This project analyzes **monsoon flood risks in Pakistan** using **Google Earth Engine (GEE)** and **Sentinel-1 SAR satellite imagery**.  
 The study covers **Layyah, Dadu, and Nowshera**, focusing on:  
 - **Before & After Flood Maps (July 2022)**  
@@ -9,7 +9,7 @@ The study covers **Layyah, Dadu, and Nowshera**, focusing on:
 
 ---
 
-## 🚀 Key Highlights  
+##  Key Highlights  
 - Generated **flood extent maps** using Sentinel-1 SAR data  
 - Conducted **flood change detection (2014–2025)** across 3 regions  
 - Produced **uniform, report-ready maps** with legends & titles  
@@ -18,7 +18,7 @@ The study covers **Layyah, Dadu, and Nowshera**, focusing on:
 
 ---
 
-## 🗺️ Regions of Study  
+##  Regions of Study  
 | Region       | Why Selected | Key Findings |  
 |--------------|-------------|--------------|  
 | **Layyah (Punjab)** | Agricultural hub prone to Indus flooding | High rural exposure, crop damage risk |  
@@ -27,15 +27,15 @@ The study covers **Layyah, Dadu, and Nowshera**, focusing on:
 
 ---
 
-## 📈 Outputs  
-- 🌐 **Before vs After Flood Maps (July 2022)**  
-- 🛰️ **Flood Change Detection Maps (2014–2025)**  
-- 🎨 **Legends & Standardized Orientation** for comparability  
-- 👥 **Population & Terrain overlays** for deeper insights  
+##  Outputs  
+-  **Before vs After Flood Maps (July 2022)**  
+-  **Flood Change Detection Maps (2014–2025)**  
+-  **Legends & Standardized Orientation** for comparability  
+-  **Population & Terrain overlays** for deeper insights  
 
 ---
 
-## 🛠️ Tools & Tech  
+##  Tools & Tech  
 - **Google Earth Engine (Code Editor)**  
 - **Sentinel-1 SAR Imagery**  
 - Optional Python libraries for post-processing:  
@@ -45,7 +45,7 @@ The study covers **Layyah, Dadu, and Nowshera**, focusing on:
 
 ---
 
-## 🎯 Impact & Applications  
+##  Impact & Applications  
 
 - **Disaster Management** → Early response & relief planning  
 - **Policy Making** → Region-specific preparedness strategies  
@@ -53,7 +53,7 @@ The study covers **Layyah, Dadu, and Nowshera**, focusing on:
 - **Urban Planning** → Identifying high-risk settlement zones  
 
 ---
-## 💻 Sample GEE Code Snippet
+##  Sample GEE Code Snippet
 // Define region of interest
 var nowshera = ee.Geometry.Rectangle([71.800, 33.900, 72.400, 34.300]);
 Map.centerObject(nowshera, 9);
@@ -72,7 +72,7 @@ var nowsheraImage = ee.ImageCollection('COPERNICUS/S1_GRD')
 ---
 
 
-## 📂 Project Structure  
+##  Project Structure  
 
 ```bash
 ├── Flood Change Detection Code (2014-2025)            # GEE code for change detection analysis
