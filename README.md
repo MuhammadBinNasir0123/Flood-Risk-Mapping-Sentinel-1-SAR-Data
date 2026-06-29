@@ -1,64 +1,57 @@
-#  Flood Risk Mapping in Pakistan Using Remote Sensing & Change Detection  
+# Flood Risk Mapping in Pakistan Using Remote Sensing & Change Detection
 
-##  Project Overview  
-This project analyzes **monsoon flood risks in Pakistan** using **Google Earth Engine (GEE)** and **Sentinel-1 SAR satellite imagery**.  
-The study covers **Layyah, Dadu, and Nowshera**, focusing on:  
-- **Before & After Flood Maps (July 2022)**  
-- **Change Detection Analysis (2014–2025)**  
-- **Urban/Rural vulnerability, terrain impact, and population exposure**  
+A geospatial analysis of monsoon flood risks across three high-vulnerability regions in Pakistan using Google Earth Engine and Sentinel-1 SAR satellite imagery.
 
 ---
 
-##  Key Highlights  
-- Generated **flood extent maps** using Sentinel-1 SAR data  
-- Conducted **flood change detection (2014–2025)** across 3 regions  
-- Produced **uniform, report-ready maps** with legends & titles  
-- Extracted **data-driven insights** on regional vulnerability  
-- Applied findings to **disaster management & resilience planning**  
+## Project Overview
+
+This project maps flood extent and detects long-term flood patterns across Layyah, Dadu, and Nowshera — three of Pakistan's most flood-prone regions. Using radar-based SAR imagery, the analysis cuts through cloud cover to produce accurate before/after flood maps and 11-year change detection results.
+
+The findings support disaster management, agricultural planning, and policy-level resilience strategies.
 
 ---
 
-##  Regions of Study  
-| Region       | Why Selected | Key Findings |  
-|--------------|-------------|--------------|  
-| **Layyah (Punjab)** | Agricultural hub prone to Indus flooding | High rural exposure, crop damage risk |  
-| **Dadu (Sindh)**   | Downstream floodplain, high-risk zone | Severe inundation, displacement hotspots |  
-| **Nowshera (KPK)** | Mountain-fed river system | Flash floods, rapid terrain-driven risks |  
+## Regions of Study
+
+| Region | Province | Why Selected | Key Finding |
+|---|---|---|---|
+| Layyah | Punjab | Agricultural hub prone to Indus River flooding | High rural exposure, significant crop damage risk |
+| Dadu | Sindh | Downstream floodplain, historically high-risk | Severe inundation, major displacement hotspots |
+| Nowshera | KPK | Mountain-fed river system | Flash floods driven by rapid terrain runoff |
 
 ---
 
-##  Outputs  
--  **Before vs After Flood Maps (July 2022)**  
--  **Flood Change Detection Maps (2014–2025)**  
--  **Legends & Standardized Orientation** for comparability  
--  **Population & Terrain overlays** for deeper insights  
+## Key Outputs
+
+- Before & After flood extent maps — July 2022 monsoon event
+- Flood change detection maps — 2014 to 2025 across all three regions
+- Population and terrain overlays for vulnerability assessment
+- Standardized map layouts with legends for report-ready comparability
+- Comprehensive geospatial report with data-driven regional insights
 
 ---
 
-##  Tools & Tech  
-- **Google Earth Engine (Code Editor)**  
-- **Sentinel-1 SAR Imagery**  
-- Optional Python libraries for post-processing:  
-  - `geopandas`  
-  - `rasterio`  
-  - `matplotlib`  
+## Tools & Technology
+
+| Tool | Purpose |
+|---|---|
+| Google Earth Engine | Satellite image processing and analysis |
+| Sentinel-1 SAR | Radar-based flood mapping (cloud-penetrating) |
+| geopandas | Geospatial data handling |
+| rasterio | Raster image processing |
+| matplotlib | Post-processing visualizations |
 
 ---
 
-##  Impact & Applications  
+## Sample GEE Code
 
-- **Disaster Management** → Early response & relief planning  
-- **Policy Making** → Region-specific preparedness strategies  
-- **Agriculture** → Crop insurance & water management insights  
-- **Urban Planning** → Identifying high-risk settlement zones  
-
----
-##  Sample GEE Code Snippet
+```javascript
 // Define region of interest
 var nowshera = ee.Geometry.Rectangle([71.800, 33.900, 72.400, 34.300]);
 Map.centerObject(nowshera, 9);
 
-// Load Sentinel-1 SAR image (July 2022)
+// Load Sentinel-1 SAR imagery (July 2022)
 var nowsheraImage = ee.ImageCollection('COPERNICUS/S1_GRD')
   .filterBounds(nowshera)
   .filterDate('2022-07-01', '2022-07-31')
@@ -67,18 +60,28 @@ var nowsheraImage = ee.ImageCollection('COPERNICUS/S1_GRD')
   .select('VV')
   .mean()
   .clip(nowshera);
-
+```
 
 ---
 
+## Applications
 
-##  Project Structure  
+- **Disaster Management** — Supports early response and relief coordination
+- **Policy Making** — Enables region-specific flood preparedness strategies
+- **Agriculture** — Informs crop insurance and water management planning
+- **Urban Planning** — Identifies high-risk settlement zones for safer development
 
-```bash
-├── Flood Change Detection Code (2014-2025)            # GEE code for change detection analysis
-├── Flood Change Detection Imagery.pdf                 # Maps generated for flood change detection
-├── Flood Risk Mapping Code – (July 2022)              # GEE code for July 2022 flood mapping
-├── Flood Risk Mapping Imagery.pdf                     # Maps generated for July 2022 flood mapping
-├── Geospatial Flood Risk Assessment(SAR Analysis).pdf # Comprehensive report
-├── LICENSE                                            # License file
-├── README.md                                          # Project documentation
+---
+
+## Project Structure
+
+```
+├── Flood Change Detection Code (2014-2025).js     # GEE script for change detection
+├── Flood Change Detection Imagery.pdf             # Output maps — change detection
+├── Flood Risk Mapping Code (July 2022).js         # GEE script for 2022 flood mapping
+├── Flood Risk Mapping Imagery.pdf                 # Output maps — July 2022 floods
+├── Geospatial Flood Risk Assessment (SAR).pdf     # Full analysis report
+└── README.md                                      # Project documentation
+```
+
+---
