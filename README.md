@@ -1,46 +1,44 @@
 # Flood Risk Mapping in Pakistan Using Remote Sensing & Change Detection
 
-A geospatial analysis of monsoon flood risks across three high-vulnerability regions in Pakistan using Google Earth Engine and Sentinel-1 SAR satellite imagery.
-
----
-
-## Project Overview
-
-This project maps flood extent and detects long-term flood patterns across Layyah, Dadu, and Nowshera — three of Pakistan's most flood-prone regions. Using radar-based SAR imagery, the analysis cuts through cloud cover to produce accurate before/after flood maps and 11-year change detection results.
-
-The findings support disaster management, agricultural planning, and policy-level resilience strategies.
+A geospatial analysis of monsoon flood vulnerability across three high-risk districts in Pakistan using Google Earth Engine and Sentinel-1 SAR satellite imagery. The study combines July 2022 flood extent mapping with 11-year change detection (2014–2025) to support disaster management and resilience planning.
 
 ---
 
 ## Regions of Study
 
-| Region | Province | Why Selected | Key Finding |
+| Region | Province | Key Vulnerability | Critical Finding |
 |---|---|---|---|
-| Layyah | Punjab | Agricultural hub prone to Indus River flooding | High rural exposure, significant crop damage risk |
-| Dadu | Sindh | Downstream floodplain, historically high-risk | Severe inundation, major displacement hotspots |
-| Nowshera | KPK | Mountain-fed river system | Flash floods driven by rapid terrain runoff |
+| Layyah | Punjab | Indus River overflow, irrigation breaches | Moderate-to-high flood increase in southern zones |
+| Dadu | Sindh | Flat terrain, poor drainage, 2022 super floods | Most critical zone, persistent inundation since 2022 |
+| Nowshera | KPK | Kabul & Swat rivers, urban expansion | Expanding floodplain with lateral spread over 11 years |
 
 ---
 
-## Key Outputs
+## Key Findings
 
-- Before & After flood extent maps — July 2022 monsoon event
-- Flood change detection maps — 2014 to 2025 across all three regions
-- Population and terrain overlays for vulnerability assessment
-- Standardized map layouts with legends for report-ready comparability
-- Comprehensive geospatial report with data-driven regional insights
+**July 2022 Flood Risk Mapping**
+- Layyah: moderate-to-high SAR reflectance along the Indus belt indicating riverine flooding
+- Dadu: deep inundation patterns across a wide floodplain, aligns with reports of 70%+ land submersion at peak
+- Nowshera: high reflectance along Kabul River floodplain extending into urban and peri-urban zones
+
+**Change Detection (2014–2025)**
+- Layyah: moderate surface water increase, driven by intensified monsoon cycles and irrigation failures
+- Dadu: significant increase in persistent flood zones, poor post-flood drainage rehabilitation evident
+- Nowshera: visible lateral spread of floodplain activity reflecting higher upstream rainfall frequency
 
 ---
 
-## Tools & Technology
+## Live GEE Code
 
-| Tool | Purpose |
-|---|---|
-| Google Earth Engine | Satellite image processing and analysis |
-| Sentinel-1 SAR | Radar-based flood mapping (cloud-penetrating) |
-| geopandas | Geospatial data handling |
-| rasterio | Raster image processing |
-| matplotlib | Post-processing visualizations |
+**Flood Risk Mapping, July 2022**
+- [Nowshera](https://code.earthengine.google.com/5ed4681223e5f6ebddd9a04918f7a0f6)
+- [Dadu](https://code.earthengine.google.com/eab40dd4883a577579e3a8966b18bd72)
+- [Layyah](https://code.earthengine.google.com/f4e357b713cf5be1e00a247facaca36e)
+
+**Flood Change Detection, 2014–2025**
+- [Nowshera](https://code.earthengine.google.com/047eaeae1e3c94ca2bb3cf406fd29c72)
+- [Dadu](https://code.earthengine.google.com/4e9ad907dad2bd1eeec365396ccebcdc)
+- [Layyah](https://code.earthengine.google.com/96ed8c59afcb21ec9f39561673fc3234)
 
 ---
 
@@ -64,24 +62,44 @@ var nowsheraImage = ee.ImageCollection('COPERNICUS/S1_GRD')
 
 ---
 
+## Tools & Technology
+
+| Tool | Purpose |
+|---|---|
+| Google Earth Engine | Satellite image processing and flood analysis |
+| Sentinel-1 SAR | Radar-based imagery, penetrates cloud cover |
+| geopandas | Geospatial data handling |
+| rasterio | Raster image processing |
+| matplotlib | Post-processing visualizations |
+
+---
+
+## Outputs
+
+| File | Description |
+|---|---|
+| Flood Risk Mapping Imagery.pdf | SAR maps for all 3 regions, July 2022 |
+| Flood Change Detection Imagery.pdf | 11-year change maps for all 3 regions (2014–2025) |
+| Geospatial Flood Risk Assessment.pdf | Full report with methodology, findings, and citations |
+
+---
+
 ## Applications
 
-- **Disaster Management** — Supports early response and relief coordination
-- **Policy Making** — Enables region-specific flood preparedness strategies
-- **Agriculture** — Informs crop insurance and water management planning
-- **Urban Planning** — Identifies high-risk settlement zones for safer development
+- Disaster Management: early response and relief coordination
+- Policy Making: region-specific flood preparedness strategies
+- Agriculture: crop insurance and water management planning
+- Urban Planning: identifying high-risk settlement zones
 
 ---
 
 ## Project Structure
 
 ```
-├── Flood Change Detection Code (2014-2025).js     # GEE script for change detection
-├── Flood Change Detection Imagery.pdf             # Output maps — change detection
-├── Flood Risk Mapping Code (July 2022).js         # GEE script for 2022 flood mapping
-├── Flood Risk Mapping Imagery.pdf                 # Output maps — July 2022 floods
-├── Geospatial Flood Risk Assessment (SAR).pdf     # Full analysis report
-└── README.md                                      # Project documentation
+├── Flood Risk Mapping Imagery.pdf
+├── Flood Change Detection Imagery.pdf
+├── Geospatial Flood Risk Assessment (SAR Analysis).pdf
+└── README.md
 ```
 
 ---
